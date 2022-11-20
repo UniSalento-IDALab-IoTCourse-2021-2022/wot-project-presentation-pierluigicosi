@@ -3,15 +3,126 @@
 
 @import "{{ site.theme }}";
 
-img {
-  display: block;
-  margin: 0 auto;
-  max-width: 100%;
-  height: auto;
-}
+.project-name{text-decoration: none;font: italic 3em "Fira Sans", serif;}
+.project-tagline{text-decoration: none;font: italic 1.5em "Fira Sans", serif;}
 
+.centro {
+  display:block;
+  margin:0 auto;
+  text-align:center;
+}
 video{
   margin: 0 auto;
   max-width: 100%;
-  height: auto;
+}
+
+.video_div {
+  height: 600px;
+}
+
+h1{
+  text-decoration: underline;
+}
+
+h2{
+  text-decoration: underline;
+}
+
+/** footer **/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer {
+  position: relative;
+  width: 100%;
+  background: rgb(4, 170, 75);
+  min-height: 40px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-icon,
+
+.social-icon__item,
+
+.find_me{
+  font-size: 1.3rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  font-weight: bolder;
+}
+
+.social-icon__link {
+  font-size: 1rem;
+  color: #fff;
+  margin: 0 10px;
+  display: inline-block;
+  transition: 0.5s;
+}
+.social-icon__link:hover {
+  transform: translateY(-10px);
+}
+
+.footer p {
+  color: #fff;
+  margin: 0px 0 10px 0;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.wave {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: url("../../images/wave.jpeg");
+  background-size: 1000px 100px;
+}
+
+.wave#wave1 {
+  z-index: 300;
+  opacity: 1;
+  bottom: 0;
+  animation: animateWaves 4s linear infinite;
+}
+
+.wave#wave2 {
+  z-index: 100;
+  opacity: 0.5;
+  bottom: 10px;
+  animation: animate 4s linear infinite !important;
+}
+
+.wave#wave3 {
+  z-index: 800;
+  opacity: 0.2;
+  bottom: 15px;
+  animation: animateWaves 3s linear infinite;
+}
+
+@keyframes animateWaves {
+  0% {
+    background-position-x: 1000px;
+  }
+  100% {
+    background-positon-x: 200px;
+  }
+}
+
+@keyframes animate {
+  0% {
+    background-position-x: -1000px;
+  }
+  100% {
+    background-positon-x: 200px;
+  }
 }
